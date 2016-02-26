@@ -11,8 +11,6 @@ object Main {
 
     def main(args: Array[String]) {
 
-      start()
-
       timing("program total") {
 
         val names = timing("create names") { Array("Tick","Trick","Track") }

@@ -14,10 +14,12 @@ object SETM {
   BasicEtmConfigurator.configure(true) // nested
   private val monitor = EtmManager.getEtmMonitor()
 
-  /**
-   * Start monitoring
-   */
-  def start() = monitor.start()
+  // Start monitoring
+  monitor.start()
+
+
+  def enable = monitor.enableCollection()
+  def disable = monitor.disableCollection()
 
   /*
    * Stop monitoring, collect results and render them
